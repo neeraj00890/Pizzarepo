@@ -34,12 +34,6 @@ app.use(express.json())
 
 const MONGO_URI = 'mongodb+srv://pump-db:pump123@pump-db.bn4vh.mongodb.net/pump-db'
 
-app.use('/get',(req,res, next) => {
-    res.send({
-        name:"neeraj"
-    })
-});
-
 app.use('/pizza',APIRoutes);
 
 

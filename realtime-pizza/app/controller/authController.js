@@ -17,15 +17,17 @@ function authController(){
         },
         login:async (req,res,next)=>{
           
-           let dbuser = await User.findOne({username:req.body.username}) 
+           let dbuser = await User.findOne({username:req.body.username});
+           console.log(dbuser);
            if(dbuser){
-               console.log(dbuser);
+               
            let doMatch = await bcrypt.compare(req.body.password,dbuser.password);
            console.log(doMatch);
            if(doMatch){
-               res.json({...dbuser._doc,success:true})
+               return res.json({...dbuser._doc,success:true})
            }
            }
+           throw res.send(404);
            
 
         }
