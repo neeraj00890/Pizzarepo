@@ -11,7 +11,8 @@ const MongoDbStore =require('connect-mongo')(session)
 const Menu =require('./app/models/menu')
 const APIRoutes=require('./routes/api');
 
-
+var cors = require("cors");
+    app.use(cors());
 
 const store = new MongoDbStore({
     mongooseConnection:mongoose.connection,
