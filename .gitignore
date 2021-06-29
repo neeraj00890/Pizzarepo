@@ -1,4 +1,11 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+ "bcryptjs": "^2.4.3",
+      "connect-mongo": "^3.2.0",
+      "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-session": "^1.17.1",
+      "mongodb": "^3.6.2",
+      "mongoose": "^5.10.7"# See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
 /dist
