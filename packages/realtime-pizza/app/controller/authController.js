@@ -1,6 +1,6 @@
 
-const User=require('../models/user')
-const bcrypt = require('bcryptjs')
+const User=require('../models/user');
+const bcrypt = require('bcryptjs');
 function authController(){
     return {
         signup: async (req,res,next)=>{

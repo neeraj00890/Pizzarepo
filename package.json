@@ -1,30 +1,39 @@
 {
-    "name": "realtime-pizza",
-    "version": "1.0.0",
-    "description": "realtime-pizza",
-    "main": "index.js",
-    "private": true,
-    "workspaces": [
-        "packages/*"
-    ], "bcryptjs": "^2.4.3",
-    "connect-mongo": "^3.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-session": "^1.17.1",
-    "mongodb": "^3.6.2",
-    "mongoose": "^5.10.7",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "nodemon server.js",
-      "neeraj": "nodemon server.js"
-    },
-    "author": "Neeraj.kumar",
-    "license": "ISC",
-    "dependencies": {
-    },
-    "devDependencies": {
-      "nodemon": "^2.0.4"
+  "name": "realtime-pizza",
+  "version": "1.0.0",
+  "description": "realtime-pizza",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "bcryptjs": "^2.4.3",
+  "connect-mongo": "^3.2.0",
+  "cors": "^2.8.5",
+  "dotenv": "^8.2.0",
+  "express": "^4.17.1",
+  "express-session": "^1.17.1",
+  "mongodb": "^3.6.2",
+  "mongoose": "^5.10.7",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "neeraj": "nodemon server.js",
+    "pre-push": "git diff --quiet HEAD -- yarn.lock || (echo 'yarn.lock is dirty!' && exit 1)"
+  },
+  "author": "Neeraj.kumar",
+  "license": "ISC",
+  "dependencies": {
+    "husky": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "@commitlint/config-conventional": "^8.3.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "yarn run check-pre-push && npm test"
     }
   }
-  
+}
