@@ -29,7 +29,7 @@
         "memoryReservation": 128,
         "volumesFrom": [],
         "stopTimeout": null,
-        "image": "067275172286.dkr.ecr.us-east-2.amazonaws.com/realtime-pizza:latest",
+        "image": "067275172286.dkr.ecr.us-east-2.amazonaws.com/realtime-pizza",
         "startTimeout": null,
         "firelensConfiguration": null,
         "dependsOn": null,
@@ -51,12 +51,12 @@
     ],
     "placementConstraints": [],
     "memory": "128",
-    "taskRoleArn": "arn:aws:iam::067275172286:role/ecsTaskExecutionRole",
+    "taskRoleArn": null,
     "compatibilities": [
       "EXTERNAL",
       "EC2"
     ],
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:067275172286:task-definition/realtime-pizza:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:067275172286:task-definition/realtime-pizza:4",
     "family": "realtime-pizza",
     "requiresAttributes": [
       {
@@ -70,12 +70,6 @@
         "targetType": null,
         "value": null,
         "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "com.amazonaws.ecs.capability.task-iam-role"
       }
     ],
     "pidMode": null,
@@ -84,7 +78,7 @@
     ],
     "networkMode": null,
     "cpu": "128",
-    "revision": 1,
+    "revision": 4,
     "status": "ACTIVE",
     "inferenceAccelerators": null,
     "proxyConfiguration": null,
