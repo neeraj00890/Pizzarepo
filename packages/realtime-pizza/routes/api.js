@@ -8,6 +8,9 @@ const authorizationController= require('../app/controller/authController')
 router.get('/fetchAll',homeController().getAllPizzas);
 router.post('/updateCart',cartController().updateCart);
 router.get('/getCart',cartController().getCart);
+router.get('/dummy', (req, res, next) => {
+    res.send({name: "neeraj"})
+});
 
 router.post('/signUp',authorizationController().signup);
 router.post('/login',authorizationController().login);

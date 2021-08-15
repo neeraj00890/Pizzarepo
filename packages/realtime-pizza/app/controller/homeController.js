@@ -9,7 +9,7 @@ function homeController(){
             }
         
            //   console.log(req.session.cart);
-        res.json({...await Menu.find(),totalCartCount:totalQty})
+        res.json({...await Menu.find(),totalCartCount:100 || totalQty})
         }
     }   
 }

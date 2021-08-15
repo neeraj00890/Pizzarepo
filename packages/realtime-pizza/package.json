@@ -1,5 +1,5 @@
 {
-  "name": "realtime-pizza",
+  "name": "@realtime/pizza",
   "version": "1.0.0",
   "description": "realtime-pizza",
   "main": "index.js",

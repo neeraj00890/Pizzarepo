@@ -17,7 +17,7 @@
   "mongoose": "^5.10.7",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "yarn workspace @realtime/pizza start",
     "neeraj": "nodemon server.js",
     "check-package-lock": "git diff --quiet HEAD -- yarn.lock || (echo 'yarn.lock is dirty!' && exit 1)",
     "pre-push": "echo 'Running Pre-push' && yarn run check-package-lock"

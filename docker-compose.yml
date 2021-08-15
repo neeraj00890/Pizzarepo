@@ -1,0 +1,10 @@
+version: "3"
+services: 
+    "main-app": 
+        build: 
+            context: ./
+            dockerfile: ./packages/realtime-pizza/image/Dockerfile
+        ports: 
+          - 3000:3000
+        env_file: 
+          - ./packages/realtime-pizza/.env

@@ -31,17 +31,13 @@ app.use(express.json())
 
 //Session
 
-
-const MONGO_URI = 'mongodb+srv://pump-db:pump123@pump-db.bn4vh.mongodb.net/pump-db'
-
 app.use('/pizza',APIRoutes);
 
 
-mongoose.connect(MONGO_URI,()=>{
-   
+mongoose.connect(process.env.MONGO_URI,()=>{
     app.listen(PORT,()=>{
        
-    console.log(`Listening on PORT : ${PORT}`)
+    console.log(`Listening on PORT Congratulations : ${PORT}`)
     console.log(path.join(__dirname));
 });
 })
